@@ -1,5 +1,1 @@
-[
-  { "file": "1-checklist.jpg", "path": "/", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "2-silver.jpg", "path": "/", "grade": "silver", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "3-bronze.jpg", "path": "/", "grade": "bronze", "scroll": 1400, "viewport": { "width": 1280, "height": 800 } }
-]
+[{"file":"1-checklist.jpg","path":"/#/","shows":"Checklist top: progress header with per-grade counts, filter chips, Next up panel, first trophies with grade medals (seeded progress: 5 earned)","viewport":{"height":800,"width":1280}},{"file":"2-guide.jpg","path":"/#/trophy/17","shows":"Trophy detail: The Shootist guide with its sources named, trophy facts and the 30/42 Shooting Range counter","viewport":{"height":800,"width":1280}},{"file":"3-roadmap.jpg","path":"/#/roadmap","shows":"Roadmap to the platinum: the seven stages with their trophies and earned state","viewport":{"height":800,"width":1280}},{"file":"4-spoilers.jpg","path":"/#/trophies?shield=on&filter=missable","shows":"Spoiler shield on with the Missable filter: hidden trophies masked, missable flags visible, one earned strand finale revealed","viewport":{"height":800,"width":1280}}]

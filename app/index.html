@@ -3,23 +3,77 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GTA VI trophy checklist</title>
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>GTA VI trophy checklist</h1>
-  <p id="progress">0 of 55 earned</p>
+<header class="site-header">
+  <div class="header-main">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="10" fill="#ffd166"/><path d="M4 34 Q16 26 24 34 T44 34 V48 H4 Z" fill="#ff4d7e" opacity=".85"/><path d="M4 40 Q16 33 24 40 T44 40 V48 H4 Z" fill="#22d3ee" opacity=".7"/></svg>
+      <div>
+        <h1>Leonida Legend</h1>
+        <p class="tagline">GTA VI trophy guide &amp; tracker — all 55 PlayStation 5 trophies, offline</p>
+      </div>
+    </div>
+    <div class="header-progress">
+      <div class="progress-line"><strong id="progress-pct">0%</strong> <span id="progress-text">0 of 55 earned</span></div>
+      <div class="progress-bar"><div id="progress-fill"></div></div>
+      <div class="grade-counts" id="grade-counts"></div>
+    </div>
+  </div>
+  <div class="toolbar">
+    <nav class="tabs" aria-label="Views">
+      <a href="#/" data-nav="list">Checklist</a>
+      <a href="#/roadmap" data-nav="roadmap">Roadmap</a>
+      <a href="#/missables" data-nav="missables">Missables <span class="tab-badge" id="missable-count"></span></a>
+    </nav>
+    <div class="toolbar-actions">
+      <label class="shield-toggle"><input type="checkbox" id="shield"> Spoiler shield</label>
+      <button id="export-btn" type="button">Export</button>
+      <label class="import-btn">Import <input id="import-file" type="file" accept="application/json" hidden></label>
+      <button id="reset-btn" type="button">Reset</button>
+    </div>
+  </div>
 </header>
-<div class="controls">
-  <label>Grade <select id="grade"><option value="all">All</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
-  <button id="export" type="button">Export progress</button>
-  <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
-</div>
-<table>
-  <thead><tr><th>Earned</th><th>Trophy</th><th>Grade</th><th>How to get it</th></tr></thead>
-  <tbody id="rows"></tbody>
-</table>
+
+<main id="main">
+  <section id="view-list">
+    <div class="filter-bar">
+      <div class="chips" id="chips" role="group" aria-label="Filter by kind">
+        <button type="button" data-chip="all" class="chip active">All</button>
+        <button type="button" data-chip="story" class="chip">Story</button>
+        <button type="button" data-chip="missable" class="chip">Missable</button>
+        <button type="button" data-chip="collectibles" class="chip">Collectibles</button>
+        <button type="button" data-chip="activities" class="chip">Activities</button>
+        <button type="button" data-chip="online" class="chip">Online</button>
+      </div>
+      <label class="grade-filter">Grade
+        <select id="grade-select">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <input id="search" type="search" placeholder="Search trophies…" aria-label="Search trophies">
+    </div>
+    <section class="next-up" id="next-up" aria-label="Next up"></section>
+    <div id="list"></div>
+    <p class="empty-state" id="online-empty" hidden>The PS5 list has no online trophies — the partner trophies are story co-op.</p>
+    <p class="empty-state" id="none-empty" hidden>No trophies match these filters.</p>
+  </section>
+
+  <section id="view-roadmap" hidden></section>
+  <section id="view-missables" hidden></section>
+  <section id="view-detail" hidden></section>
+</main>
+
+<footer class="site-footer">
+  <p>Progress is saved in this browser (localStorage) — export it before switching devices. Trophy names, descriptions and grades are the official PlayStation 5 list; every guide is written for this app and cites its sources. Not affiliated with Rockstar Games.</p>
+</footer>
+
 <script type="module" src="app.js"></script>
 </body>
 </html>
